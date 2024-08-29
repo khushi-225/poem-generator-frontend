@@ -1,0 +1,63 @@
+.btn {
+  border: none;
+  width: 12em;
+  height: 3em;
+  border-radius: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #1c1a1c;
+  cursor: pointer;
+  transition: all 450ms ease-in-out;
+  position: relative;
+  font-size: 17px; /* Adjust font size to match original button */
+}
+
+.sparkle {
+  fill: #aaaaaa;
+  transition: all 800ms ease;
+}
+
+.text {
+  font-weight: 600;
+  color: #aaaaaa;
+  font-size: medium;
+  transition: color 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(0deg, #a47cf3, #683fea); /* Adjust colors for a more subtle effect */
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2),
+              inset 0px -4px 0px 0px rgba(0, 0, 0, 0.1),
+              0px 0px 0px 2px rgba(255, 255, 255, 0.1),
+              0px 0px 100px 0px #7b38e0; /* Reduce the spread and intensity of the shadow */
+  transform: translateY(-1px); /* Reduce the lift effect */
+}
+
+.btn:hover .text {
+  color: white; /* Adjust text color for a better contrast */
+}
+
+.btn:hover .sparkle {
+  fill: white;
+  transform: scale(1.1); /* Reduce the scale effect for a subtler glow */
+}
+
+/* Additional styling for analyzing state */
+.btn.analyzing {
+  background: #333; /* Darker background for analyzing state */
+}
+
+.btn.analyzing .text {
+  color: #cccccc; /* Lighter text color for analyzing state */
+}
+
+/* Additional styling for done state */
+.btn.done {
+  background: #4caf50; /* Green background for done state */
+}
+
+.btn.done .text {
+  color: #ffffff; /* White text color for done state */
+}
